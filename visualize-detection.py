@@ -32,7 +32,7 @@ def compute_prob(x, distribution):
     return prob
 
 
-def update_label_based_on_energy(logits, classes, unk_dist, known_dist):
+def update_label_based_on_distribution(logits, classes, unk_dist, known_dist):
     unknown_class_index = 80
     cls = classes
     lse = torch.logsumexp(logits[:, :5], dim=1)
@@ -84,7 +84,7 @@ instances = outputs["instances"].to(torch.device("cpu"))
 dev =instances.pred_classes.get_device()
 classes = instances.pred_classes.tolist()
 logits = instances.logits
-classes = update_label_based_on_energy(logits, classes, unk_dist, known_dist)
+classes = update_label_based_on_distribution(logits, classes, unk_dist, known_dist)
 classes = torch.IntTensor(classes).to(torch.device("cuda"))
 outputs["instances"].pred_classes = classes
 print(classes)
