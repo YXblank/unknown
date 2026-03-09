@@ -20,3 +20,6 @@ Kindly check `run.sh` file for a task workflow.
 Our code base is build on top of [Detectron 2](https://github.com/facebookresearch/detectron2) library. 
 
 
+## Output folder results
+As the number of our test results in incremental learning tasks is huge, we provide extra link in https://github.com/YXblank/unknown/tree/T1 to download test results
+
