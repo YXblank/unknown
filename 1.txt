@@ -1,0 +1,15 @@
+
+//test
+cd demo
+python demo.py --config-file /home/xuyuan/pan/OWOD-master/output/t1_clustering_with_save/config.yaml --input /home/xuyuan/pan/OWOD-master/IMG_8248.JPG --opts MODEL.WEIGHTS /home/xuyuan/pan/OWOD-master/output/t1_final/model_final.pth
+
+config  weights
+t1        t1, model_final.pth 
+t1        t1,unknow,model_final.pth                    unknow
+t1        t1_clustering_with_save,model_final.pth
+t1        t1_final,model_final.pth,                    unknow
+t1        t1_only_thresh,model_final.pth
+
+//tets on coco
+python demo.py --config-file ../configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml --input /home/xuyuan/pan/OWOD-master/IMG_8250.JPG --opts  MODEL.WEIGHTS detectron2://COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x/137849600/model_final_f10217.pkl
+
