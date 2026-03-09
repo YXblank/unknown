@@ -1,11 +1,5 @@
 
 
-## Installation
-
-See [INSTALL.md](INSTALL.md).
-
-Dataset setup: Follow [these](https://github.com/JosephKJ/OWOD/issues/59#issuecomment-897747744) instructions.
-
 ## Quick Start
 
 Some bookkeeping needs to be done for the code, like removing the local paths and so on. We will update these shortly. 
